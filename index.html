@@ -4,18 +4,25 @@
   <meta charset="UTF-8">
   <title>Aervanta Promo Video</title>
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-  <style>
-    body {
-      background-color: #000;
-      margin: 0;
-      padding: 0;
-    }
-    video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: scale(1.25); /* Increase size by 25% */
+    transform-origin: center;
+    display: block;
+  }
+</style>
+
 </head>
 <body>
   <video id="player" playsinline autoplay muted loop>
