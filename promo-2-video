@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aervanta Promo Video 2</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    video {
+      width: 80vw;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      video { width: 100vw; }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-wrapper">
+    <video id="player" autoplay muted loop playsinline>
+      <source src="aervanta-promo-2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player', {
+      controls: [],
+      autoplay: true,
+      muted: true,
+      loop: { active: true }
+    });
+  </script>
+</body>
+</html>
